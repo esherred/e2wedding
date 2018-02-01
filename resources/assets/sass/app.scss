@@ -1,9 +1,18 @@
-
 // Fonts
+@font-face {
+  font-family: 'Celestial';
+  src: 
+    url('../fonts/CelestialFree.ttf') 
+    format('truetype');
+}
+@import url('https://fonts.googleapis.com/css?family=Della+Respira');
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap/scss/bootstrap";
+
+// Custom
+@import "custom";
