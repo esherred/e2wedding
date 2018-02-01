@@ -22,7 +22,7 @@ class CreateGuestsTable extends Migration
             $table->string('address2')->nullable();
             $table->string('city');
             $table->string('state');
-            $table->interger('zip');
+            $table->integer('zip');
             $table->boolean('need_guest');
             $table->timestamps();
         });

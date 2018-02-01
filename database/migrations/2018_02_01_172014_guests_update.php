@@ -27,7 +27,7 @@ class GuestsUpdate extends Migration
     public function down()
     {
          Schema::table('guests', function (Blueprint $table) {
-            $table->interger('zip')->change();
+            $table->integer('zip')->change();
             $table->boolean('need_guest')->change();
         });
     }
