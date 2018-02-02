@@ -9,25 +9,25 @@
 {{ Form::open(['action' => 'GuestsController@store', 'method' => 'post']) }}
   <div class="form-row">
     <div class="form-group col-md-4">
-      {{Form::text('fname', '', ['class' => 'form-control', 'placeholder' => 'First Name'])}}
+      {{Form::text('fname', '', ['class' => 'form-control form-control-lg', 'placeholder' => 'First Name'])}}
     </div>
     <div class="form-group col-md-4">
-      {{Form::text('lname', '', ['class' => 'form-control', 'placeholder' => 'Last Name'])}}
+      {{Form::text('lname', '', ['class' => 'form-control form-control-lg', 'placeholder' => 'Last Name'])}}
     </div>
     <div class="form-group col-md-4">
-      {{Form::email('email', '', ['class' => 'form-control', 'placeholder' => 'Email'])}}
+      {{Form::email('email', '', ['class' => 'form-control form-control-lg', 'placeholder' => 'Email'])}}
     </div>
   </div>
   <div class="form-group">
-    {{Form::text('address1', '', ['class' => 'form-control', 'placeholder' => 'Address Line 1'])}}
+    {{Form::text('address1', '', ['class' => 'form-control form-control-lg', 'placeholder' => 'Address Line 1'])}}
   </div>
   <div class="form-group">
-    {{Form::text('address2', '', ['class' => 'form-control', 'placeholder' => 'Address Line 2 (optional)'])}}
+    {{Form::text('address2', '', ['class' => 'form-control form-control-lg', 'placeholder' => 'Address Line 2 (optional)'])}}
     
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      {{Form::text('city', '', ['class' => 'form-control', 'placeholder' => 'City'])}}
+      {{Form::text('city', '', ['class' => 'form-control form-control-lg', 'placeholder' => 'City'])}}
     </div>
     <div class="form-group col-md-4">
       {{Form::select('state',array(
@@ -86,14 +86,16 @@
         ) , 
         '',
         [
-          'class' => 'form-control'
+          'class' => 'form-control form-control-lg'
         ]
       )}}
     </div>
     <div class="form-group col-md-2">
-      {{Form::number('zip', '', ['class' => 'form-control', 'placeholder' => 'Zip'])}}
+      {{Form::text('zip', '', ['class' => 'form-control form-control-lg', 'placeholder' => 'Zip'])}}
     </div>
   </div>
   {{Form::hidden('page', $_SERVER['REQUEST_URI'])}}
-  {{Form::submit('Send Info!', ['class' => 'btn btn-primary'])}}
+  <div class="form-row justify-content-center">
+    {{Form::submit('Send Info!', ['class' => 'btn btn-lg btn-primary'])}}
+  </div>
 {{ Form::close() }}

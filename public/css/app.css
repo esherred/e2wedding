@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Della+Respira);@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@font-face {
+@import url(https://fonts.googleapis.com/css?family=Oxygen:300,400,700);@font-face {
   font-family: 'Celestial';
   src: url(/fonts/CelestialFree.ttf?d535356b278ccff07235302b35f3b9b3) format("truetype");
 }
@@ -10000,7 +10000,7 @@ a.text-dark:focus {
 }
 
 body {
-  font-family: 'Della Respira', serif;
+  font-family: 'Oxygen', sans-serif;
   line-height: 1.5rem;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.5);
