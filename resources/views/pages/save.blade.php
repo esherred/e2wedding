@@ -3,7 +3,7 @@
 Save The Date
 @endsection
 @section('header')
-Save The Date<br>
+Save <span style="font-family: borderline; font-size: 6rem;">H</span> Date<br>
 <small>Saturday, September 8, 2018</small>
 @endsection
 @section('content')

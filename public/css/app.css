@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Oxygen:300,400,700);@font-face {
   font-family: 'Celestial';
-  src: url(/fonts/CelestialFree.ttf?d535356b278ccff07235302b35f3b9b3) format("truetype");
+  src: url(/fonts/CelestialTypeface.ttf?9d0de1e1f9041d47d872417d1b53b444) format("truetype"), url(/fonts/CelestialTypeface.otf?881f98197e1bf5c11fe72d18d7c5bd5c) format("opentype");
+}
+
+@font-face {
+  font-family: 'borderline';
+  src: url(/fonts/borderline.ttf?0324a95eb975e0ea189a5aafbe201721) format("truetype"), url(/fonts/borderline.otf?1d22ddc515d75bebb9c650e773f65219) format("opentype");
 }
 
 /*!
@@ -10026,6 +10031,10 @@ h6 {
 
 a {
   font-weight: bold;
+}
+
+small {
+  font-size: 60%;
 }
 
 .flip-x {
