@@ -5,6 +5,10 @@ body {
   letter-spacing: 2px;
   color: rgba(255,255,255,.5);
   color: #343a40;
+  padding-top: 63px;
+  @media (max-width: 768px) {
+    padding-top: 79.69px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

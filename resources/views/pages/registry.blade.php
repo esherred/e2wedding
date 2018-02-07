@@ -23,7 +23,7 @@ Registry
             {{Form::label($location, $location, ['class' => 'form-check-label'])}}
           @else
             {{Form::checkbox('location[]', $location, false, ['class' => 'form-check-input', 'id' => $location, 'onclick' => "if(this.checked){ document.getElementById('other-input').focus();}"])}}
-            {{Form::text('other', '', ['class' => 'form-control form-control-sm','id' => 'other-input', 'placeholder' => 'Other', 'onfocus' => "$('#Other').prop('checked', true)"])}}
+            {{Form::text('other', '', ['class' => 'form-control','id' => 'other-input', 'placeholder' => 'Other', 'onfocus' => "$('#Other').prop('checked', true)"])}}
           @endif
         </div>
       @endforeach

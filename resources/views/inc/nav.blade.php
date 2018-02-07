@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-top fixed-top">
+  <a class="navbar-brand d-inline-block d-md-none" href="/"><img src="{{ asset('img/logo.png') }}" class="img-fluid" style="max-width:50px;" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

@@ -10005,6 +10005,13 @@ body {
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.5);
   color: #343a40;
+  padding-top: 63px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 79.69px;
+  }
 }
 
 h1,
