@@ -29,6 +29,11 @@ Registry
       @endforeach
     </div>
     <div class="form-row justify-content-center">
+      <div class="col-md-6 col-12 mb-3 text-center">
+        {{Form::text('name', '', ['class' => 'form-control form-control-lg', 'placeholder' => 'Full Name (required)'])}}
+      </div>
+    </div>
+    <div class="form-row justify-content-center">
       <div class="col text-center">
         {{Form::submit('Submit Vote!', ['class' => 'btn btn-lg btn-primary'])}}
       </div>
@@ -41,6 +46,11 @@ Registry
     </div>
   </div>
   {!!Form::open(['action' => 'PagesController@gifts', 'method' => 'post'])!!}
+    <div class="form-row justify-content-center">
+      <div class="col-md-6 col-12 mb-3 text-center">
+        {{Form::text('name', '', ['class' => 'form-control form-control-lg', 'placeholder' => 'Full Name (required)'])}}
+      </div>
+    </div>
     <div class="form-row">
       @foreach($registry as $item)
         <div class="col-lg-4 col-md-6 col-12 mb-3">
@@ -62,7 +72,7 @@ Registry
       @endforeach
     </div>
     <div class="form-row justify-content-center">
-      <div class="col text-center">
+      <div class="col-lg-4 col-md-6 col-12 mb-3 text-center">
         {{Form::submit('Continue >>', ['class' => 'btn btn-lg btn-primary'])}}
       </div>
     </div>

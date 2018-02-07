@@ -24,6 +24,12 @@
   </div>
 @endif
 
+@if(app('request')->input('no-name') != null)
+  <div class="alert alert-danger">
+    Please Enter Your Name To Continue
+  </div>
+@endif
+
 @if(app('request')->input('no-loc') != null)
   <div class="alert alert-danger">
     Please Select A Location

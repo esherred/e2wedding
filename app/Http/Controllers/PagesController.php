@@ -30,6 +30,7 @@ class PagesController extends Controller
   }
 
   public function registry() {
+
     $locations = array(
       'Croatia',
       'Italy',
@@ -130,8 +131,9 @@ class PagesController extends Controller
     $requestData = $request->request->all();
     $total = 0;
     $saveData = array();
+    
     foreach ($requestData as $key => $value) {
-      if ($key != '_token') {
+      if ($key != '_token' && $key != 'name') {
         if ($value != null) {
           $total += $value;
 
@@ -140,16 +142,26 @@ class PagesController extends Controller
             'amt' => $value,
             'created_at'=>date('Y-m-d H:i:s'),
             'updated_at'=> date('Y-m-d H:i:s'),
+            'name' => $request->input('name'),
           );
         }
       }
     }
 
-    Gift::insert($saveData);
-
+    if ($request->input('name') == null) {
+      $error[] = 'no-name=1';
+    }
     if ($total == 0) {
-      return redirect('/registry?no-amt=1');
+      $error[] = 'no-amt=1';
+    }
+    if (isset($error)) {
+      $path = '/registry?';
+      foreach ($error as $err) {
+        $path .= $err . '&';
+      }
+      return redirect($path);
     } else {
+      Gift::insert($saveData);
       return redirect('/registry/' . $total);
     }
   }
@@ -160,8 +172,19 @@ class PagesController extends Controller
 
   public function locations(Request $request) {
     if ($request->input('location') == null) {
-      return redirect('/registry?no-loc=1');
+      $error[] = 'no-loc=1';
     }
+    if ($request->input('name') == null) {
+      $error[] = 'no-name=1';
+    }
+    if (isset($error)) {
+      $path = '/registry?';
+      foreach ($error as $err) {
+        $path .= $err . '&';
+      }
+      return redirect($path);
+    }
+
     $locations = $request->input('location');
     $saveData = array();
     foreach ($locations as $location) {
@@ -170,13 +193,15 @@ class PagesController extends Controller
           'location' => $request->input('other'),
           'created_at'=>date('Y-m-d H:i:s'),
           'updated_at'=> date('Y-m-d H:i:s'),
+          'name' => $request->input('name'),
         );
       } else {
         $saveData[] = array(
-        'location' => $location,
-        'created_at'=>date('Y-m-d H:i:s'),
-        'updated_at'=> date('Y-m-d H:i:s'),
-      );
+          'location' => $location,
+          'created_at'=>date('Y-m-d H:i:s'),
+          'updated_at'=> date('Y-m-d H:i:s'),
+          'name' => $request->input('name'),
+        );
       }
     }
     HoneymoonLocation::insert($saveData);
