@@ -1,5 +1,5 @@
 @extends('layouts.back')
-@section('title', 'Wedding Party')
+@section('title', 'Wedding Party |')
 @section('header', 'Wedding Party')
 @section('content')
   <div class="row">

@@ -1,6 +1,6 @@
 @extends('layouts.back')
 @section('title')
-Registry
+Registry |
 @endsection
 @section('header')
 Registry

@@ -1,6 +1,6 @@
 @extends('layouts.back')
 @section('title')
-Save The Date
+Save The Date |
 @endsection
 @section('header')
 Save <span style="font-family: borderline; font-size: 6rem;">H</span> Date<br>

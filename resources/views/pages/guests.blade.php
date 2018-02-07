@@ -1,6 +1,6 @@
 @extends('layouts.back')
 @section('title')
-Guest List
+Guest List |
 @endsection
 @section('header')
 Guest List
