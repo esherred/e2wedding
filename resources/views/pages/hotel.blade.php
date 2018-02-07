@@ -17,6 +17,8 @@
       <p>500 S 4th St<br>
       Louisville, KY 40202</p>
 
+      <p>We were lucky enough to be able to get a great deal on this amazing historic landmark hotel. This hotel helped inspire F. Scott Fitzgerald's "The Great Gatsby" and we'd love for you to stay there with us! The breathtaking lobby should help set the scene!</p>
+
       <p>
         <a target="_blank" href="https://secure.hilton.com/en/hi/res/choose_dates.jhtml?groupCode=RSW&hotel=SDFSHHF&arrivalDay=07&arrivalMonth=09&arrivalYear=2018&departureDay=09&departureMonth=09&departureYear=2018&WT.mc_id=1HI2OLL3SeelbachHiltonLouisville4Local5BookNow6SDFSHHF7EN">Block Reservations</a>
         <br>
