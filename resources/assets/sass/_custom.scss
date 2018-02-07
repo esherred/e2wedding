@@ -74,6 +74,26 @@ small {
 .jumbotron {
   background-color: #000;
   color: #fff;
+  h1 {
+    span {
+      &.borderline {
+        font-family: borderline;
+        font-size: 170%;
+        &.bigger {
+          font-size: 220%;
+        }
+      }
+      &.bigger {
+        font-size: 140%;
+      }
+    }
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 1.9rem;
+    }
+  }
 }
 
 .google-maps {

@@ -1,9 +1,9 @@
-@extends('layouts.home')
+@extends('layouts.back')
 @section('title')
 
 @endsection
 @section('header')
-<span style="font-family: borderline; font-size: 8rem;">H</span> <span style="font-size:5rem;">Wedding</span> <span style="font-family: borderline; font-size: 8rem;">C</span> <br>Erica Rodgers <span style="font-family: borderline; font-size: 6rem;">F</span> Eric Sherred<br>
+<span class="borderline bigger">H</span> <span class="bigger">Wedding</span> <span class="borderline bigger">C</span> <br>Erica Rodgers <span class="borderline d-lg-inline d-block">F</span> Eric Sherred<br>
 <small>Saturday, September 8, 2018</small>
 @endsection
 @section('content')

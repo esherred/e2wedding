@@ -10090,6 +10090,31 @@ small {
   color: #fff;
 }
 
+.jumbotron h1 span.borderline {
+  font-family: borderline;
+  font-size: 170%;
+}
+
+.jumbotron h1 span.borderline.bigger {
+  font-size: 220%;
+}
+
+.jumbotron h1 span.bigger {
+  font-size: 140%;
+}
+
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .jumbotron h1 {
+    font-size: 1.9rem;
+  }
+}
+
 .google-maps {
   position: relative;
   padding-bottom: 50%;
