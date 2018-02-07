@@ -72,7 +72,7 @@ class PagesController extends Controller
       ),
       array(
         'title' => 'Ghost Tour',
-        'description' => 'One of our favorite things to do at any new place',
+        'description' => 'One of our favorite things to do at any new place!',
         'id' => 'ghosts', 
       ),
       array(
