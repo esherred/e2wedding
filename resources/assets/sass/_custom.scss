@@ -38,13 +38,6 @@ h1, h2, h3, h4, h5, h6 {
           transform: scaleY(-1) scaleX(-1);
 }
 
-.jumbotron {
-  padding: 4rem 2rem;
-  @media (max-width: 576px) {
-    padding: 4rem 1rem;
-  }
-}
-
 .b-top {
   border-top: 3px double #fff;
 }
