@@ -1,6 +1,6 @@
 @extends('layouts.home')
 @section('title')
-Erica Rodgers and Eric Sherred
+The Wedding of Erica Rodgers and Eric Sherred
 @endsection
 @section('header')
 <span style="font-family: borderline; font-size: 8rem;">H</span> <span style="font-size:5rem;">Wedding</span> <span style="font-family: borderline; font-size: 8rem;">C</span> <br>Erica Rodgers <span style="font-family: borderline; font-size: 6rem;">F</span> Eric Sherred<br>
