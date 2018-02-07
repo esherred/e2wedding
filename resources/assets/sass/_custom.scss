@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Celestial', sans-serif;
 }
 
+a {
+  font-weight: bold;
+}
+
 .flip-x {
   -webkit-transform: scaleX(-1);
      -moz-transform: scaleX(-1);
@@ -88,6 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   .nav-item {
     &+.nav-item {
       .nav-link {
+        font-weight: normal;
         &:before {
           content: '-';
           margin-right: 9px;
@@ -111,6 +116,7 @@ footer {
     .nav-item {
       .nav-link {
         color: #fff;
+        font-weight: normal;
       }
     }
   }

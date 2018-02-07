@@ -10024,6 +10024,10 @@ h6 {
   font-family: 'Celestial', sans-serif;
 }
 
+a {
+  font-weight: bold;
+}
+
 .flip-x {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
@@ -10096,6 +10100,10 @@ h6 {
   display: block;
 }
 
+.navbar-top .nav-item + .nav-item .nav-link {
+  font-weight: normal;
+}
+
 .navbar-top .nav-item + .nav-item .nav-link:before {
   content: '-';
   margin-right: 9px;
@@ -10114,5 +10122,6 @@ h6 {
 
 footer .nav .nav-item .nav-link {
   color: #fff;
+  font-weight: normal;
 }
 
