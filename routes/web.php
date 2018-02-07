@@ -21,10 +21,11 @@ Route::get('/save', 'PagesController@save');
 
 Route::get('/hotel', 'PagesController@hotel');
 
+Route::get('/party', 'PagesController@party');
+
 Route::resource('guests', 'GuestsController');
 
 Route::get('/registry', 'PagesController@registry');
-
-Route::get('/registry/{amt}', function($amt) {
-  return redirect('https://www.paypal.me/EricSherred/'.$amt);
-});
+Route::get('/registry/{amt}', 'PagesController@paypal');
+Route::post('/registry/gifts', 'PagesController@gifts');
+Route::post('/registry/locations', 'PagesController@locations');

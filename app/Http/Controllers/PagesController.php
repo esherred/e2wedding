@@ -3,6 +3,8 @@
 namespace E2Wedding\Http\Controllers;
 
 use Illuminate\Http\Request;
+use E2Wedding\Gift;
+use E2Wedding\HoneymoonLocation;
 
 class PagesController extends Controller
 {
@@ -21,6 +23,10 @@ class PagesController extends Controller
 
   public function hotel() {
     return view('pages.hotel');
+  }
+
+  public function party() {
+    return view('pages.party');
   }
 
   public function registry() {
@@ -118,5 +124,63 @@ class PagesController extends Controller
       'locations' => $locations,
       'registry' => $registry,
     ));
+  }
+
+  public function gifts(Request $request) {
+    $requestData = $request->request->all();
+    $total = 0;
+    $saveData = array();
+    foreach ($requestData as $key => $value) {
+      if ($key != '_token') {
+        if ($value != null) {
+          $total += $value;
+
+          $saveData[] = array(
+            'gift' => $key,
+            'amt' => $value,
+            'created_at'=>date('Y-m-d H:i:s'),
+            'updated_at'=> date('Y-m-d H:i:s'),
+          );
+        }
+      }
+    }
+
+    Gift::insert($saveData);
+
+    if ($total == 0) {
+      return redirect('/registry?no-amt=1');
+    } else {
+      return redirect('/registry/' . $total);
+    }
+  }
+
+  public function paypal($amt) {
+    return redirect('https://www.paypal.me/E2Honeymoon/'.$amt);
+  }
+
+  public function locations(Request $request) {
+    if ($request->input('location') == null) {
+      return redirect('/registry?no-loc=1');
+    }
+    $locations = $request->input('location');
+    $saveData = array();
+    foreach ($locations as $location) {
+      if ($location == 'Other') {
+        $saveData[] = array(
+          'location' => $request->input('other'),
+          'created_at'=>date('Y-m-d H:i:s'),
+          'updated_at'=> date('Y-m-d H:i:s'),
+        );
+      } else {
+        $saveData[] = array(
+        'location' => $location,
+        'created_at'=>date('Y-m-d H:i:s'),
+        'updated_at'=> date('Y-m-d H:i:s'),
+      );
+      }
+    }
+    HoneymoonLocation::insert($saveData);
+
+    return redirect('/registry?success=1');
   }
 }

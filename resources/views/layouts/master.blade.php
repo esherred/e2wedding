@@ -20,13 +20,15 @@
 
     <footer class="mt-3">
       <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="/"><img src="{{ asset('img/logo-idea-white.png') }}" class="img-fluid" style="max-width:75px;" alt=""></a>
+        <a class="navbar-brand" href="/"><img src="{{ asset('img/logo.png') }}" class="img-fluid" style="max-width:75px;" alt=""></a>
         <ul class="nav">
           @include('inc.navitems')
         </ul>
       </nav>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script> 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> 
     <script src="{{ asset('js/min/app-min.js') }}"></script>
 </body>
 </html>
