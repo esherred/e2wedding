@@ -10085,9 +10085,20 @@ h6 {
   height: 100% !important;
 }
 
+.navbar-top .in {
+  display: block;
+}
+
 .navbar-top .nav-item + .nav-item .nav-link:before {
   content: '-';
   margin-right: 9px;
+}
+
+@media (max-width: 768px) {
+  .navbar-top .nav-item + .nav-item .nav-link:before {
+    content: '';
+    margin-right: 0px;
+  }
 }
 
 .navbar-top .nav-item + .nav-item .nav-link:hover:before {
