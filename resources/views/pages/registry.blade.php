@@ -42,7 +42,9 @@ Registry
   <hr>
   <div class="row">
     <div class="col">
-      <p>While the greatest gift of all will be your presence on September 8th, for those who wish to generously help us live out our travel dreams, we have included a Honeymoon registry. And for anyone who hates travel, we have also included an Amazon registry.</p>
+      <p>While the greatest gift of all will be your presence on September 8th, for those who wish to generously help us live out our travel dreams, we have included a Honeymoon registry. And for anyone who hates travel, we have also included an <a href="https://smile.amazon.com/wedding/erica-rodgers-eric-sherred-louisville-september-2018/registry/2CDV3GY6PZ5F4" target="_blank">Amazon registry</a>.</p>
+      <p><strong>To Use:</strong><br>
+      Please enter the amount you wish to gift under the item(s) you wish to gift. Once done, enter your name and press "Continue." This will take you to a Paypal site where you can either log in or create an account. Paypal should be able to walk you through the process no matter which you have to do.</p>
     </div>
   </div>
   {!!Form::open(['action' => 'PagesController@gifts', 'method' => 'post'])!!}
