@@ -4,7 +4,7 @@
 @section('content')
   <div class="row">
     <div class="col-12 mb-3">
-      <img src="http://www.seelbachhilton.com/img/jumbotron-seelbach-entrance.jpg" alt="Seelbach Hotel" class="img-fluid rounded">
+      <img src="/img/jumbotron-seelbach-entrance.jpg" alt="Seelbach Hotel" class="img-fluid rounded">
     </div>
     <div class="col-md-6 col-12 mb-3">
       <div class="google-maps rounded">
