@@ -94,6 +94,9 @@
       {{Form::text('zip', '', ['class' => 'form-control form-control-lg', 'placeholder' => 'Zip'])}}
     </div>
   </div>
+  <div class="form-group">
+    {{Form::text('allergy', '', ['class' => 'form-control form-control-lg', 'placeholder' => 'Food Allergies (optional)'])}}
+  </div>
   {{Form::hidden('page', $_SERVER['REQUEST_URI'])}}
   <div class="form-row justify-content-center">
     {{Form::submit('Send Info!', ['class' => 'btn btn-lg btn-primary'])}}

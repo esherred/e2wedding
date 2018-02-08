@@ -45,9 +45,15 @@ class GuestsController extends Controller
             'city' => 'required',
             'state' => 'required',
             'zip' => 'required|max:5',
+            'allergy' => 'nullable',
         ]);
 
-        $guest = tap(new Guest($data))->save();
+        $data += array(
+            'created_at'=>date('Y-m-d H:i:s'),
+            'updated_at'=> date('Y-m-d H:i:s'),
+        );
+
+        Guest::insert($data);
 
         return redirect($request->input('page'))->with('success', 'Data Saved');
     }
