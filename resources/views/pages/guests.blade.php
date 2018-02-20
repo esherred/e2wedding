@@ -7,13 +7,14 @@ Guest List
 @endsection
 @section('content')
   <div class="row justify-content-center">
-    <div class="col-6">
+    <div class="col-md-6 col">
       @if (isset($guests) && $guests->count() > 0)
       <table class="table">
         <thead>
           <tr>
             <th>Name</th>
             <th>Address</th>
+            <th>Allergy</th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +27,9 @@ Guest List
                 {{$guest->address2}}<br>
               @endif
               {{$guest->city}}, {{$guest->state}} {{$guest->zip}}
+            </td>
+            <td>
+              {{$guest->allergy}}
             </td>
           </tr>
           @endforeach
