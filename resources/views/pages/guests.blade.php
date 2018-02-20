@@ -7,7 +7,7 @@ Guest List
 @endsection
 @section('content')
   <div class="row justify-content-center">
-    <div class="col-md-6 col">
+    <div class="col-md-10 col">
       @if (isset($guests) && $guests->count() > 0)
       <table class="table">
         <thead>
