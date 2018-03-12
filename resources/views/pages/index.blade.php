@@ -1,4 +1,4 @@
-@extends('layouts.back')
+@extends('layouts.home')
 @section('title')
 
 @endsection
