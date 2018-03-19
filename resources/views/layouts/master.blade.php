@@ -26,13 +26,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
   <body>
-    @include('inc.nav')
 
     @yield('body')
 
     <footer class="mt-3">
       <nav class="navbar navbar-dark bg-dark justify-content-center">
-        <a class="navbar-brand d-none d-lg-inline-block" href="/"><img src="{{ asset('img/logo.png') }}" class="img-fluid" style="max-width:75px;" alt=""></a>
+        <a class="navbar-brand d-none d-lg-inline-block" href="/"><img src="{{ asset('img/logo-white.png') }}" class="img-fluid" style="max-width:75px;" alt=""></a>
         <ul class="nav">
           @include('inc.navitems')
         </ul>

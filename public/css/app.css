@@ -10010,13 +10010,6 @@ body {
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.5);
   color: #343a40;
-  padding-top: 63px;
-}
-
-@media (max-width: 768px) {
-  body {
-    padding-top: 79px;
-  }
 }
 
 h1,
@@ -10078,15 +10071,15 @@ small {
   margin-top: -50%;
 }
 
-.w-150 {
+.w-150px {
   max-width: 150px;
 }
 
-.w-125 {
+.w-125px {
   max-width: 125px;
 }
 
-.w-100 {
+.w-100px {
   max-width: 100px;
 }
 

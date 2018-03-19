@@ -29,3 +29,7 @@ Route::get('/registry', 'PagesController@registry');
 Route::get('/registry/{amt}', 'PagesController@paypal');
 Route::post('/registry/gifts', 'PagesController@gifts');
 Route::post('/registry/locations', 'PagesController@locations');
+
+Route::get('/engagementparty', function() {
+  return view('pages.engagement');
+});
