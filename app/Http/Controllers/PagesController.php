@@ -29,6 +29,18 @@ class PagesController extends Controller
     return view('pages.party');
   }
 
+  public function faq() {
+    return view('pages.faq');
+  }
+
+  public function rsvp() {
+    return view('pages.rsvp');
+  }
+
+  public function activities() {
+    return view('pages.activities');
+  }
+
   public function registry() {
 
     $locations = array(

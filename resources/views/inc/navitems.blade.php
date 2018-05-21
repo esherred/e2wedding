@@ -13,3 +13,9 @@
 <li class="nav-item">
   <a class="nav-link" href="/registry">Registry</a>
 </li>
+<li class="nav-item">
+  <a class="nav-link" href="/things-to-do">Things To Do</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/faq">FAQ</a>
+</li>

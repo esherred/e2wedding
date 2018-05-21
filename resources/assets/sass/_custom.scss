@@ -135,6 +135,29 @@ small {
   }
 }
 
+.faq {
+  h3 {
+    font-family: 'Oxygen', sans-serif;
+    margin-top: 2rem;
+    &:first-child {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.ttd {
+  h3 {
+    font-family: 'Oxygen', sans-serif;
+    margin-top: 2rem;
+    &:first-child {
+      margin-top: 1rem;
+    }
+  }
+  h5 {
+    font-family: 'Oxygen', sans-serif;
+  }
+}
+
 footer {
   .nav {
     .nav-item {

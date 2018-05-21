@@ -23,6 +23,12 @@ Route::get('/hotel', 'PagesController@hotel');
 
 Route::get('/party', 'PagesController@party');
 
+Route::get('/faq', 'PagesController@faq');
+
+Route::get('/rsvp', 'PagesController@rsvp');
+
+Route::get('/things-to-do', 'PagesController@activities');
+
 Route::resource('guests', 'GuestsController');
 
 Route::get('/registry', 'PagesController@registry');
