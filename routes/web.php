@@ -13,7 +13,7 @@
 
 use Illuminate\Http\Request;
 
-Route::get('/', 'PagesController@index');
+Route::get('/', 'PagesController@index')->name('home');
 
 Route::get('/about', 'PagesController@about');
 
@@ -39,3 +39,5 @@ Route::post('/registry/locations', 'PagesController@locations');
 Route::get('/engagementparty', function() {
   return view('pages.engagement');
 });
+
+Auth::routes();
