@@ -31,6 +31,10 @@ Route::get('/things-to-do', 'PagesController@activities');
 
 Route::resource('guests', 'GuestsController');
 
+Route::post('rsvp/search', 'RSVPController@search');
+Route::post('rsvp/save', 'RSVPController@save');
+Route::get('rsvp/{id}', 'RSVPController@show');
+
 Route::get('/registry', 'PagesController@registry');
 Route::get('/registry/{amt}', 'PagesController@paypal');
 Route::post('/registry/gifts', 'PagesController@gifts');
