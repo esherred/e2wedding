@@ -16,10 +16,14 @@
                     <div class="card-body">
                       <span class="switch switch-sm float-right">
                         {{ Form::hidden('guest[]', $guest['id']) }}
-                        {{ Form::checkbox('rsvp[]', $guest['id'], $guest['attending'], ['id' => $guest['id']] ) }}
+                        {{ Form::checkbox("rsvp[{$guest['id']}]", true, $guest['attending'], ['id' => $guest['id']] ) }}
                         {{ Form::label($guest['id'], 'Attending?', ['class' => 'd-block']) }}
                       </span>
                       <h5 class="card-title">{{ $guest['fname'] }} {{ $guest['lname'] }}</h5>
+                      <div class="form-group">
+                        {{ Form::label("allergy[{$guest['id']}]", 'Allergy') }}
+                        {{ Form::text("allergy[{$guest['id']}]", $guest['allergy'], ['class' => 'form-control']) }}
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -7,7 +7,7 @@
           <div class="row">
             <div class="col-2 col-md-1"><img src="{{ asset('img/corner-white.png') }}" class="img-fluid" alt=""></div>
             <div class="col b-top"></div>
-            <div class="col w-100px"><img src="{{ asset('img/logo-white.png') }}" class="img-fluid mt-50" alt=""></div>
+            <div class="col w-100px"><a href="/"><img src="{{ asset('img/logo-white.png') }}" class="img-fluid mt-50" alt=""></a></div>
             <div class="col b-top"></div>
             <div class="col-2 col-md-1"><img src="{{ asset('img/corner-white.png') }}" class="flip-x img-fluid" alt=""></div>
           </div>

@@ -18,7 +18,7 @@ class CreateRSVPsTable extends Migration
             $table->string('fname');
             $table->string('lname');
             $table->integer('guest_id')->nullable();
-            $table->string('allergy')->nullbale();
+            $table->string('allergy')->nullable();
             $table->boolean('has_rsvp')->default(0);
             $table->boolean('attending')->nullable();
             $table->timestamps();

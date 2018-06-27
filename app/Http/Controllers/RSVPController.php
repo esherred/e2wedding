@@ -8,6 +8,16 @@ use E2Wedding\RSVP;
 
 class RSVPController extends Controller
 {
+  /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  public function __construct()
+  {
+      $this->middleware('auth', ['except' => ['search', 'show', 'save']]);
+  }
+
   public function search(Request $request) {
     $result = RSVP::where(function($query) {
         global $request;
@@ -56,22 +66,29 @@ class RSVPController extends Controller
   public function save(Request $request) {
 
     foreach ($request->guest as $guest) {
-      $data['attending'] = 0;
+      if(!isset($request->rsvp[$guest])) {
+        $rsvp = 0;
+      } else {
+        $rsvp = $request->rsvp[$guest];
+      }
+      $data['attending'] = $rsvp;
       $data['updated_at'] = Carbon::now()->format('Y-m-d H:i:s');
       $data['has_rsvp'] = 1;
-
-      foreach ($request->rsvp as $rsvp) {
-        if ($guest == $rsvp) {
-          $data['attending'] = 1;
-          break;
-        }
-      }
+      $data['allergy'] = $request->allergy[$guest];
 
       RSVP::where('id', $guest)->update($data);
 
       unset($data);
+      unset($rsvp);
     }
 
+
     return redirect("rsvp/{$request->id}")->with('success', "RSVP(s) Have Been Updated");
+  }
+
+  public function list() {
+    $guests = RSVP::all();
+
+    return view('pages.rsvp.list')->with('guests', $guests);
   }
 }
