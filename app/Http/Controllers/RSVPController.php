@@ -19,11 +19,11 @@ class RSVPController extends Controller
   }
 
   public function search(Request $request) {
-    $result = RSVP::where(function($query) {
-        global $request;
-        $query->where('fname', $request->fname)
-          ->where('lname', $request->lname);
-      })->orWhere('lname', $request->lname)->get();
+    $result = RSVP::where('fname', $request->fname)->where('lname', $request->lname)->get();
+
+    if($result->count() < 1) {
+      $result = RSVP::where('lname', $request->lname)->get();
+    }
 
     return view('pages.rsvp.result')->with('guests', $result);
   }
