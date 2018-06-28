@@ -120,7 +120,7 @@ small {
         &:before {
           content: '-';
           margin-right: 9px;
-          @media (max-width: 768px) {
+          @media (max-width: 991px) {
             content: '';
             margin-right: 0px;
           }
@@ -141,6 +141,15 @@ small {
     margin-top: 2rem;
     &:first-child {
       margin-top: 1rem;
+    }
+  }
+}
+
+.party {
+  p {
+    font-size: 1.25rem;
+    strong {
+      font-size: 1rem;
     }
   }
 }

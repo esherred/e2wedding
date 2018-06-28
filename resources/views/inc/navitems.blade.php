@@ -5,7 +5,10 @@
   <a class="nav-link" href="/about">Our Story</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="/save">Save The Date</a>
+  <a class="nav-link" href="/party">Wedding Party</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/rsvp">RSVP</a>
 </li>
 <li class="nav-item">
   <a class="nav-link" href="/hotel">Hotel</a>

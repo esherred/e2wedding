@@ -29,7 +29,20 @@ Route::get('/rsvp', 'PagesController@rsvp');
 
 Route::get('/things-to-do', 'PagesController@activities');
 
+Route::get('/invitation', function() {
+  return view('pages.invitation');
+});
+
+Route::get('/party', function() {
+  return view('pages.party');
+});
+
 Route::resource('guests', 'GuestsController');
+
+Route::post('rsvp/search', 'RSVPController@search');
+Route::post('rsvp/save', 'RSVPController@save');
+Route::get('rsvp/list', 'RSVPController@list');
+Route::get('rsvp/{id}', 'RSVPController@show');
 
 Route::get('/registry', 'PagesController@registry');
 Route::get('/registry/{amt}', 'PagesController@paypal');
