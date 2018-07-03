@@ -13,6 +13,7 @@
     </div>
     <div class="col-md-6 col-12 mb-3">
       <h2>Seelbach Hotel</h2>
+      <h4>Reserve By August 8th!</h4>
 
       <p>500 S 4th St<br>
       Louisville, KY 40202</p>

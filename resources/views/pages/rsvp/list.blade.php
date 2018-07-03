@@ -15,6 +15,13 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{ \E2Wedding\RSVP::where('has_rsvp', 1)->count() }} / {{ \E2Wedding\RSVP::count() }}</td>
+            <td>{{ \E2Wedding\RSVP::where('attending', 1)->count() }} / {{ \E2Wedding\RSVP::count() }}</td>
+          </tr>
           @foreach($guests as $count => $guest)
             <tr>
               <th scope="row">{{ $count + 1 }}</th>
