@@ -5,6 +5,8 @@ namespace E2Wedding\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use E2Wedding\RSVP;
+use E2Wedding\User;
+use Mail;
 
 class RSVPController extends Controller
 {
@@ -77,11 +79,23 @@ class RSVPController extends Controller
       $data['allergy'] = $request->allergy[$guest];
 
       RSVP::where('id', $guest)->update($data);
-
+      // $guests[] = RSVP::where('id', $guest)->first();
       unset($data);
       unset($rsvp);
     }
 
+    $guests = $request->guest;
+
+    Mail::send('emails.rsvp', ['guests' => $guests], function($message) {
+      $message->from('info@e2wedding.com', 'e2wedding');
+      $users = User::all();
+      foreach ($users as $user) {
+        $message->to($user->email, $user->name);
+      }
+      // $message->to('eric@e2wedding.com', 'Eric Sherred');
+      // $message->to('esherred@gmail.com', 'Eric Sherred');
+      $message->subject('New RSVP!');
+    });
 
     return redirect("rsvp/{$request->id}")->with('success', "RSVP(s) Have Been Updated");
   }
