@@ -79,7 +79,7 @@ class RSVPController extends Controller
       $data['allergy'] = $request->allergy[$guest];
 
       RSVP::where('id', $guest)->update($data);
-      // $guests[] = RSVP::where('id', $guest)->first();
+
       unset($data);
       unset($rsvp);
     }
@@ -92,12 +92,10 @@ class RSVPController extends Controller
       foreach ($users as $user) {
         $message->to($user->email, $user->name);
       }
-      // $message->to('eric@e2wedding.com', 'Eric Sherred');
-      // $message->to('esherred@gmail.com', 'Eric Sherred');
       $message->subject('New RSVP!');
     });
 
-    return redirect("rsvp/{$request->id}")->with('success', "RSVP(s) Have Been Updated");
+    return redirect("rsvp/{$request->id}")->with('success', "RSVP(s) Have Been Updated")->with('hotel', "REMINDER: Reserve Your Hotel By August 8th!");
   }
 
   public function list() {

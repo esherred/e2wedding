@@ -62,3 +62,12 @@
     </button>
   </div>
 @endif
+
+@if (session('hotel'))
+  <div class="alert alert-info">
+    <a href="/hotel">{{session('hotel')}}</a>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+@endif
