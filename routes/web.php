@@ -13,6 +13,10 @@
 
 use Illuminate\Http\Request;
 
+if (env('APP_ENV') === 'production') {
+    URL::forceSchema('https');
+}
+
 Route::get('/', 'PagesController@index')->name('home');
 
 Route::get('/about', 'PagesController@about');
