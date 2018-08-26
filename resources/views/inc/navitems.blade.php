@@ -7,9 +7,9 @@
 <li class="nav-item">
   <a class="nav-link" href="/party">Wedding Party</a>
 </li>
-<li class="nav-item">
+{{-- <li class="nav-item">
   <a class="nav-link" href="/rsvp">RSVP</a>
-</li>
+</li> --}}
 <li class="nav-item">
   <a class="nav-link" href="/hotel">Hotel</a>
 </li>
