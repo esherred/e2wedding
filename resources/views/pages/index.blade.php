@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="col-lg-4">
-      <h3 class="text-center"><a href="/rsvp">RSVP Now</a></h3>
+      {{-- <h3 class="text-center"><a href="/rsvp">RSVP Now</a></h3> --}}
       <a href="/invitation"><img src="/img/invitation.jpg" alt="Invitation" class="img-fluid img-thumbnail"></a>
     </div>
   </div>
