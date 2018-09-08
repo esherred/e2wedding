@@ -13377,6 +13377,26 @@ small {
   font-family: 'Oxygen', sans-serif;
 }
 
+.program section {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #000000;
+}
+
+.program section h2 {
+  margin-bottom: 1rem;
+}
+
+.program section.by-the-numbers {
+  font-size: 1.1rem;
+  line-height: 61px;
+}
+
+@media (max-width: 767px) {
+  .program section.by-the-numbers {
+    line-height: normal;
+  }
+}
+
 footer .nav .nav-item .nav-link {
   color: #fff;
   font-weight: normal;

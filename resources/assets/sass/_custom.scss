@@ -167,6 +167,25 @@ small {
   }
 }
 
+.program {
+  section {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #000000;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    &.by-the-numbers {
+      font-size: 1.1rem;
+      line-height: 61px;
+      @media (max-width: 767px) {
+        line-height: normal;
+      }
+    }
+  }
+}
+
 footer {
   .nav {
     .nav-item {

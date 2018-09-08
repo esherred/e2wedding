@@ -19,6 +19,10 @@ if (env('APP_ENV') === 'production') {
 
 Route::get('/', 'PagesController@index')->name('home');
 
+Route::get('/program', function() {
+  return view('pages.program');
+});
+
 Route::get('/about', 'PagesController@about');
 
 Route::get('/save', 'PagesController@save');
